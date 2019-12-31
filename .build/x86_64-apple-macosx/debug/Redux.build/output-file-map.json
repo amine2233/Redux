@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/master.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/Action.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/Reducer.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/State.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/Store.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreProtocol.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriber.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.swiftdeps"
+  },
+  "/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriberProtocol.swift": {
+    "dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.d",
+    "object": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.swift.o",
+    "swiftmodule": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.swiftdeps"
+  }
+}

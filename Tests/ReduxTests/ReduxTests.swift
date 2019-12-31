@@ -31,18 +31,24 @@ class ReduxTests: XCTestCase {
     }
 
     func testPlayState() {
-        store.dispatch(action: Play(item: 6))
+        let queue = DispatchQueue(label: "Test Queue")
+        store.dispatch(on: queue, action: Play(item: 6))
+        queue.sync {}
         XCTAssertEqual(subscriber.newStateResult, "play item: 6")
     }
 
     func testUnscubscribe() {
-        store.dispatch(action: Stop(item: 2))
+        let queue = DispatchQueue(label: "Test Queue")
+
+        store.dispatch(on: queue, action: Stop(item: 2))
         let newSubscribe = MockSubscriber(name: "subscriber_2")
         store.subscribe(newSubscribe)
+        queue.sync {}
         XCTAssertEqual(newSubscribe.newStateResult, "stop item: 2")
         store.unSubscribe(newSubscribe)
 
-        store.dispatch(action: Next(increaseBy: 3))
+        store.dispatch(on: queue, action: Next(increaseBy: 3))
+        queue.sync {}
         XCTAssertEqual(newSubscribe.newStateResult, "stop item: 2")
         XCTAssertEqual(subscriber.newStateResult, "next increaseBy: 3")
     }

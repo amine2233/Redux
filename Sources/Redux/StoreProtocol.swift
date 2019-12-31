@@ -29,5 +29,5 @@ public protocol StoreProtocol: class {
 
     init(reducer: @escaping Reducer<State>, state: State?, subscribers: StoreSubscriberProtocol, options: StoreOptions)
 
-    func dispatch(action: Action)
+    func dispatch(on dispatch: DispatchQueue, action: Action)
 }

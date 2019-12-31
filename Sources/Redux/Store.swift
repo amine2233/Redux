@@ -32,17 +32,18 @@ public class Store<State: StateType>: StoreProtocol {
 }
 
 extension Store {
-
-    public func dispatch(action: Action) {
+    public func dispatch(on queue: DispatchQueue = .global(), action: Action) {
         state = reducer(action, state)
         if let state = state {
-            subscribers.next(state)
+            queue.async {
+                self.subscribers.next(state)
+            }
         }
     }
 
     public func subscribe(_ newSubscriber: StoreSubscriberType) {
         subscribers.subscribe(newSubscriber)
-        if options.contains(.Once), let state = state {
+        if !options.contains(.NoInitialValue), let state = state {
             newSubscriber.newState(state: state)
         }
     }

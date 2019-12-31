@@ -1,0 +1,65 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "main": ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule","<Redux-debug.module>"]
+  "test": ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.swiftmodule","<Redux-debug.module>","<ReduxPackageTests-debug.test>","<ReduxTests-debug.module>"]
+  "Redux-debug.module": ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule","<Redux-debug.module>"]
+  "ReduxPackageTests-debug.test": ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests","<ReduxPackageTests-debug.test>"]
+  "ReduxTests-debug.module": ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.swiftmodule","<ReduxTests-debug.module>"]
+default: "main"
+commands: 
+  "<C.Redux-debug.module>":
+    tool: phony
+    inputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule"]
+    outputs: ["<Redux-debug.module>"]
+
+  "<C.ReduxPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests"]
+    outputs: ["<ReduxPackageTests-debug.test>"]
+
+  "<C.ReduxTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.swiftmodule"]
+    outputs: ["<ReduxTests-debug.module>"]
+
+  "C.Redux-debug.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Redux"
+    module-output-path: "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule"
+    inputs: ["/Users/amine.bensalah/Projects/Redux/Sources/Redux/Action.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/Reducer.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/State.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/Store.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreProtocol.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriber.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriberProtocol.swift"]
+    outputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule"]
+    import-paths: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build"
+    objects: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-color-diagnostics"]
+    sources: ["/Users/amine.bensalah/Projects/Redux/Sources/Redux/Action.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/Reducer.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/State.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/Store.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreProtocol.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriber.swift","/Users/amine.bensalah/Projects/Redux/Sources/Redux/StoreSubscriberProtocol.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "12"
+
+  "C.ReduxPackageTests-debug.test":
+    tool: shell
+    description: "Linking ./.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests"
+    inputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Reducer.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/State.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/Store.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreProtocol.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.build/StoreSubscriberProtocol.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/MockSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/PlayerState.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxInitTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/TestReducer.swift.o"]
+    outputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests"]
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-g","-L","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug","-o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.xctest/Contents/MacOS/ReduxPackageTests","-module-name","ReduxPackageTests","-Xlinker","-bundle","@/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.10","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.ReduxTests-debug.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "ReduxTests"
+    module-output-path: "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.swiftmodule"
+    inputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/Redux.swiftmodule","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/Action.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/MockSubscriber.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/PlayerState.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/ReduxInitTests.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/ReduxTests.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/TestReducer.swift"]
+    outputs: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/MockSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/PlayerState.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxInitTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/TestReducer.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.swiftmodule"]
+    import-paths: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build"
+    objects: ["/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/Action.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/MockSubscriber.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/PlayerState.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxInitTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/ReduxTests.swift.o","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ReduxTests.build/TestReducer.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/amine.bensalah/Projects/Redux/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-color-diagnostics"]
+    sources: ["/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/Action.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/MockSubscriber.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/PlayerState.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/ReduxInitTests.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/ReduxTests.swift","/Users/amine.bensalah/Projects/Redux/Tests/ReduxTests/TestReducer.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "12"
+

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F8E823BA0EDF00C8652C"
-               BuildableName = "Redux_iOS.framework"
+               BuildableName = "Redux.framework"
                BlueprintName = "Redux iOS"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F8F123BA0EDF00C8652C"
-               BuildableName = "Redux iOSTests.xctest"
+               BuildableName = "ReduxTests.xctest"
                BlueprintName = "Redux iOSTests"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD30F8E823BA0EDF00C8652C"
-            BuildableName = "Redux_iOS.framework"
+            BuildableName = "Redux.framework"
             BlueprintName = "Redux iOS"
             ReferencedContainer = "container:Redux.xcodeproj">
          </BuildableReference>

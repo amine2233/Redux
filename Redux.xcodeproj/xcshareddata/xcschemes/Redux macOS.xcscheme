@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F93B23BA0F4C00C8652C"
-               BuildableName = "Redux_macOS.framework"
+               BuildableName = "Redux.framework"
                BlueprintName = "Redux macOS"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F94323BA0F4C00C8652C"
-               BuildableName = "Redux macOSTests.xctest"
+               BuildableName = "ReduxTests.xctest"
                BlueprintName = "Redux macOSTests"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD30F93B23BA0F4C00C8652C"
-            BuildableName = "Redux_macOS.framework"
+            BuildableName = "Redux.framework"
             BlueprintName = "Redux macOS"
             ReferencedContainer = "container:Redux.xcodeproj">
          </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F90523BA0EF700C8652C"
-               BuildableName = "Redux_watchOS.framework"
+               BuildableName = "Redux.framework"
                BlueprintName = "Redux watchOS"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD30F90523BA0EF700C8652C"
-            BuildableName = "Redux_watchOS.framework"
+            BuildableName = "Redux.framework"
             BlueprintName = "Redux watchOS"
             ReferencedContainer = "container:Redux.xcodeproj">
          </BuildableReference>

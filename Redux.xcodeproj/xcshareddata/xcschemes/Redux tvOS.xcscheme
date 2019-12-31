@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F91F23BA0F3D00C8652C"
-               BuildableName = "Redux_tvOS.framework"
+               BuildableName = "Redux.framework"
                BlueprintName = "Redux tvOS"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD30F92723BA0F3D00C8652C"
-               BuildableName = "Redux tvOSTests.xctest"
+               BuildableName = "ReduxTests.xctest"
                BlueprintName = "Redux tvOSTests"
                ReferencedContainer = "container:Redux.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD30F91F23BA0F3D00C8652C"
-            BuildableName = "Redux_tvOS.framework"
+            BuildableName = "Redux.framework"
             BlueprintName = "Redux tvOS"
             ReferencedContainer = "container:Redux.xcodeproj">
          </BuildableReference>
