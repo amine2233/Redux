@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67A1DFB22426179000256D01 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A1DFB12426179000256D01 /* Middleware.swift */; };
+		67A1DFB32426179100256D01 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A1DFB12426179000256D01 /* Middleware.swift */; };
+		67A1DFB42426179100256D01 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A1DFB12426179000256D01 /* Middleware.swift */; };
+		67A1DFB52426179100256D01 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A1DFB12426179000256D01 /* Middleware.swift */; };
 		FD30F8F323BA0EDF00C8652C /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD30F8E923BA0EDF00C8652C /* Redux.framework */; };
 		FD30F92923BA0F3D00C8652C /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD30F92023BA0F3D00C8652C /* Redux.framework */; };
 		FD30F94523BA0F4C00C8652C /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD30F93C23BA0F4C00C8652C /* Redux.framework */; };
@@ -87,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67A1DFB12426179000256D01 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		FD30F8E923BA0EDF00C8652C /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD30F8F223BA0EDF00C8652C /* ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD30F90623BA0EF700C8652C /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +226,7 @@
 				FD30F98B23BA138300C8652C /* Store.swift */,
 				FD30F98623BA136700C8652C /* StoreSubscriber.swift */,
 				FD30F99023BA403000C8652C /* StoreSubscriberProtocol.swift */,
+				67A1DFB12426179000256D01 /* Middleware.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD30F98723BA136700C8652C /* StoreSubscriber.swift in Sources */,
+				67A1DFB22426179000256D01 /* Middleware.swift in Sources */,
 				FD30F96F23BA123F00C8652C /* Reducer.swift in Sources */,
 				FD30F98223BA134B00C8652C /* Action.swift in Sources */,
 				FD30F98C23BA138300C8652C /* Store.swift in Sources */,
@@ -554,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD30F98823BA136700C8652C /* StoreSubscriber.swift in Sources */,
+				67A1DFB32426179100256D01 /* Middleware.swift in Sources */,
 				FD30F96E23BA123F00C8652C /* Reducer.swift in Sources */,
 				FD30F98323BA134B00C8652C /* Action.swift in Sources */,
 				FD30F98D23BA138300C8652C /* Store.swift in Sources */,
@@ -568,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD30F98923BA136700C8652C /* StoreSubscriber.swift in Sources */,
+				67A1DFB42426179100256D01 /* Middleware.swift in Sources */,
 				FD30F96D23BA123E00C8652C /* Reducer.swift in Sources */,
 				FD30F98423BA134C00C8652C /* Action.swift in Sources */,
 				FD30F98E23BA138300C8652C /* Store.swift in Sources */,
@@ -595,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD30F98A23BA136700C8652C /* StoreSubscriber.swift in Sources */,
+				67A1DFB52426179100256D01 /* Middleware.swift in Sources */,
 				FD30F96C23BA123E00C8652C /* Reducer.swift in Sources */,
 				FD30F98523BA134D00C8652C /* Action.swift in Sources */,
 				FD30F98F23BA138300C8652C /* Store.swift in Sources */,

@@ -17,3 +17,15 @@ extension StoreSubscriberType {
         return String(describing: self)
     }
 }
+
+extension StoreSubscriberType where Self: Equatable {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+
+extension StoreSubscriberType where Self: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.name)
+    }
+}

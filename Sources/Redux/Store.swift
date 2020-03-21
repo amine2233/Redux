@@ -16,12 +16,24 @@ public class Store<State: StateType>: StoreProtocol {
 
     public private(set) var subscribers: StoreSubscriberProtocol
 
+    public lazy var dispatchFunction: DispatchFunction = createDispatchFunction()
+
+    public var middleware: [Middleware<State>] {
+        didSet {
+            dispatchFunction = self.createDispatchFunction()
+        }
+    }
+
+    private let lock: NSLock = NSLock()
+
     public required init(reducer: @escaping Reducer<State>,
                          state: State?,
+                         middleware: [Middleware<State>] = [],
                          subscribers: StoreSubscriberProtocol = StoreSubscriber(),
                          options: StoreOptions = []) {
         self.reducer = reducer
         self.subscribers = subscribers
+        self.middleware = middleware
         self.options = options
         if let state = state {
             self.state = state
@@ -29,26 +41,43 @@ public class Store<State: StateType>: StoreProtocol {
             self.dispatch(action: DefaultAction())
         }
     }
-}
 
-extension Store {
-    public func dispatch(on queue: DispatchQueue = .global(), action: Action) {
+    private func createDispatchFunction() -> DispatchFunction {
+        return middleware
+            .reversed()
+            .reduce(
+                { [unowned self] action in
+                    self._dispatch(action: action)
+                },
+                { dispatchFunction, middleware in
+                    let dispatch: (Action) -> Void = { [weak self] in self?.dispatch(action: $0) }
+                    let getState = { [weak self] in self?.state }
+                    return middleware(dispatch, getState)(dispatchFunction)
+                })
+    }
+
+    private func _dispatch(action: Action) {
+        lock.lock(); defer { lock.unlock() }
         state = reducer(action, state)
         if let state = state {
-            queue.async {
-                self.subscribers.next(state)
-            }
+            self.subscribers.next(state)
         }
     }
 
-    public func subscribe(_ newSubscriber: StoreSubscriberType) {
+    public func dispatch(action: Action) {
+        dispatchFunction(action)
+    }
+}
+
+extension Store {
+    public func subscribe<S: StoreSubscriberType>(_ newSubscriber: S) {
         subscribers.subscribe(newSubscriber)
         if !options.contains(.NoInitialValue), let state = state {
             newSubscriber.newState(state: state)
         }
     }
 
-    public func unSubscribe(_ subscriber: StoreSubscriberType) {
+    public func unSubscribe<S: StoreSubscriberType>(_ subscriber: S) {
         subscribers.unSubscribe(subscriber)
     }
 }

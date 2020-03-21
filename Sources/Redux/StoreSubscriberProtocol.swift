@@ -11,14 +11,15 @@ public protocol StoreSubscriberProtocol {
 
     func next<State: StateType>(_ state: State)
     func subscribe(_ newSubscriber: StoreSubscriberType)
-    func unSubscribe(_ subscriber: StoreSubscriberType)
+    @discardableResult
+    func unSubscribe(_ subscriber: StoreSubscriberType) -> StoreSubscriberType?
 }
 
 public class StoreSubscriber: StoreSubscriberProtocol {
 
     private var array: [StoreSubscriberType]
 
-    public init(array: [StoreSubscriberType] = []) {
+    public init(_ array: [StoreSubscriberType] = []) {
         self.array = array
     }
 
@@ -30,10 +31,11 @@ public class StoreSubscriber: StoreSubscriberProtocol {
         array.append(newSubscriber)
     }
 
-    public func unSubscribe(_ subscriber: StoreSubscriberType) {
+    @discardableResult
+    public func unSubscribe(_ subscriber: StoreSubscriberType) -> StoreSubscriberType? {
         guard let index = array.firstIndex(where: { return $0.name == subscriber.name }) else {
-            return
+            return nil
         }
-        array.remove(at: index)
+        return array.remove(at: index)
     }
 }

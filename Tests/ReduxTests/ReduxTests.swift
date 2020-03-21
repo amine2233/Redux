@@ -8,6 +8,20 @@
 import XCTest
 @testable import Redux
 
+private let printMiddleware: Middleware<PlayerState> = { dispatch, getState in
+    return { next in
+        return { action in
+            print("==============================")
+            print("\(action), Action dispatched.")
+            next(action)
+            print("new state: \n\(String(describing: getState()))")
+            print("==============================")
+            print()
+            return
+        }
+    }
+}
+
 class ReduxTests: XCTestCase {
 
     var store: Store<PlayerState>!
@@ -15,7 +29,10 @@ class ReduxTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        self.store = Store(reducer: TestReducer.appReducer, state: nil, options: [.Once])
+        self.store = Store(reducer: TestReducer.appReducer,
+                           state: nil,
+                           middleware: [printMiddleware],
+                           options: [.Once])
         self.subscriber = MockSubscriber(name: "subscriber_1")
         self.store.subscribe(self.subscriber)
     }
@@ -31,24 +48,19 @@ class ReduxTests: XCTestCase {
     }
 
     func testPlayState() {
-        let queue = DispatchQueue(label: "Test Queue")
-        store.dispatch(on: queue, action: Play(item: 6))
-        queue.sync {}
+        store.dispatch(action: Play(item: 6))
         XCTAssertEqual(subscriber.newStateResult, "play item: 6")
     }
 
     func testUnscubscribe() {
-        let queue = DispatchQueue(label: "Test Queue")
 
-        store.dispatch(on: queue, action: Stop(item: 2))
+        store.dispatch(action: Stop(item: 2))
         let newSubscribe = MockSubscriber(name: "subscriber_2")
         store.subscribe(newSubscribe)
-        queue.sync {}
         XCTAssertEqual(newSubscribe.newStateResult, "stop item: 2")
         store.unSubscribe(newSubscribe)
 
-        store.dispatch(on: queue, action: Next(increaseBy: 3))
-        queue.sync {}
+        store.dispatch(action: Next(increaseBy: 3))
         XCTAssertEqual(newSubscribe.newStateResult, "stop item: 2")
         XCTAssertEqual(subscriber.newStateResult, "next increaseBy: 3")
     }

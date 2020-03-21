@@ -7,6 +7,11 @@
 
 import Foundation
 
+public protocol DispatchingStoreType {
+
+    func dispatch(action: Action)
+}
+
 public struct StoreOptions: OptionSet {
     public var rawValue: Int
 
@@ -19,15 +24,18 @@ public struct StoreOptions: OptionSet {
     public static let Once = StoreOptions(rawValue: 2)
 }
 
-public protocol StoreProtocol: class {
+public protocol StoreProtocol: DispatchingStoreType {
     associatedtype State: StateType
 
     var options: StoreOptions { get }
     var reducer: Reducer<State> { get }
     var state: State? { get }
     var subscribers: StoreSubscriberProtocol { get }
+    var middleware: [Middleware<State>] { get }
 
-    init(reducer: @escaping Reducer<State>, state: State?, subscribers: StoreSubscriberProtocol, options: StoreOptions)
-
-    func dispatch(on dispatch: DispatchQueue, action: Action)
+    init(reducer: @escaping Reducer<State>,
+         state: State?,
+         middleware: [Middleware<State>],
+         subscribers: StoreSubscriberProtocol,
+         options: StoreOptions)
 }
