@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Store<State: StateType>: StoreProtocol {
+open class Store<State: StateType>: StoreProtocol {
     public private(set) var options: StoreOptions
 
     public private(set) var reducer: Reducer<State>
@@ -64,20 +64,20 @@ public class Store<State: StateType>: StoreProtocol {
         }
     }
 
-    public func dispatch(action: Action) {
+    open func dispatch(action: Action) {
         dispatchFunction(action)
     }
 }
 
 extension Store {
-    public func subscribe<S: StoreSubscriberType>(_ newSubscriber: S) {
+    open func subscribe<S: StoreSubscriberType>(_ newSubscriber: S) {
         subscribers.subscribe(newSubscriber)
         if !options.contains(.NoInitialValue), let state = state {
             newSubscriber.newState(state: state)
         }
     }
 
-    public func unSubscribe<S: StoreSubscriberType>(_ subscriber: S) {
+    open func unSubscribe<S: StoreSubscriberType>(_ subscriber: S) {
         subscribers.unSubscribe(subscriber)
     }
 }
