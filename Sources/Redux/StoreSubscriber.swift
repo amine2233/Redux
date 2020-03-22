@@ -9,7 +9,7 @@ import Foundation
 
 public protocol StoreSubscriberType {
     var name: String { get }
-    func newState(state: StateType?)
+    func newState(state: StateType)
 }
 
 extension StoreSubscriberType {

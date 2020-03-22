@@ -17,7 +17,7 @@ class MockSubscriber: StoreSubscriberType {
         self.name = name
     }
 
-    func newState(state: StateType?) {
+    func newState(state: StateType) {
         if let state = state as? PlayerState {
             self.newStateResult = state.name
         }
